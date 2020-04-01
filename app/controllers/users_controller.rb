@@ -11,6 +11,10 @@ class UsersController < ApplicationController
         @user = User.create(uesr_params)
     end
 
+    def show
+        @user = User.find(params[:id])
+    end
+
     def edit
         @user = User.find(params[:id])
     end
